@@ -146,7 +146,7 @@ def test_complex():
     as well.
     '''
     a = np.loadtxt('square/a.txt')
-    b = np.loadtxt('square/b.txt').astype(np.complex)
+    b = np.loadtxt('square/b.txt').astype(complex)
     c, s, x, u, v = pygsvd.gsvd(a, b, full_matrices=True, extras='uv')
     assert c.dtype == np.double # Singular values are always real
     assert s.dtype == np.double # Singular values are always real
